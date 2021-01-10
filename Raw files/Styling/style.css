@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+* {
+  font-family: "Russo One";
+}
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.DrumMachine {
+  background-color: #aaa;
+  border: 3px solid gold;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 7px 3px rgb(255, 166, 0);
+  display: flex;
+  width: 600px;
+  margin: 0 auto;
+  padding: 1rem 0; 
+}
+.DrumPads {
+  flex: 1 1 60%;
+  height: max-content;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.DrumPad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .5rem;
+  width: 3em;
+  height: 3em;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 1rem;
+  background-color: #888;
+  box-shadow: 3px 3px 3px #111;
+}
+.DrumPad:active {
+  background-color: #aaa;
+  font-size: 1.999rem;
+  box-shadow: 1px 1px 1px #111;
+}
+.Controls {
+  flex: 1 1 40%;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+.Power, .Bank {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 3.5rem;
+}
+.Power > div:nth-child(1), .Bank > div:nth-child(1) {
+  /* Name */
+  padding: .1rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+}
+.Power > div:nth-child(2), .Bank > div:nth-child(2) {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  padding: .2rem;
+  background-color: #000;
+  border-radius: 1rem;
+}
+.Power > div:nth-child(2) > div, .Bank > div:nth-child(2) > div {
+  background: #fff;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.Power > div:nth-child(2) > div:active, .Bank > div:nth-child(2) > div:active {
+  background: #ddd;
+}
+.Display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #888;
+  width: 85%;
+  height: 3rem;
+}
+.SlideBar {
+  padding-right: .3rem;
+  border: 1px solid #888;
+  width: 100%;
+}
+.SlideBar input {
+  width: 100%;
+}
